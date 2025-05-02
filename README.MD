@@ -1,182 +1,187 @@
 # FlockShop - Collaborative Product Wishlist App
 
-FlockShop is a full-stack MERN application that allows users to create, manage, and interact with collaborative wishlists in real-time. Users can create wishlists, add products, invite friends, and interact with products through reactions and comments.
+A full‑stack MERN application that lets users create, manage, and interact with shared wishlists in real time. Users can sign up, create wishlists, add products, invite friends (mocked), and react or comment on items.
+
+---
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Project Structure](#project-structure)
+4. [Prerequisites](#prerequisites)
+5. [Setup & Run](#setup--run)
+6. [Environment Variables](#environment-variables)
+7. [Usage](#usage)
+8. [Assumptions & Limitations](#assumptions--limitations)
+9. [Future Improvements](#future-improvements)
+10. [Demo & Screenshots](#demo--screenshots)
+11. [Deployment](#deployment)
+
+---
 
 ## Features
 
-- User authentication (signup/login)
-- Create, view, update, and delete wishlists
-- Add, edit, and remove products from wishlists
-- Invite other users to collaborate on wishlists
-- Real-time updates using Socket.io
-- Emoji reactions to products
-- Comments on products
-- Responsive, mobile-friendly UI
+* **Authentication**: Signup/Login with JWT (mocked)
+* **Wishlists**: Create, read, update, delete
+* **Products**: Add, edit, remove items (name, image URL, price)
+* **Collaboration**: Mock invites, real‑time updates via Socket.io
+* **Interactions**: Emoji reactions & comments on products
+* **Responsive UI**: Mobile‑friendly design
+
+---
 
 ## Tech Stack
 
-- **Frontend**: React (with Vite), React Router, Socket.io Client
-- **Backend**: Node.js, Express
-- **Database**: MongoDB (with Mongoose)
-- **Real-time Communication**: Socket.io
-- **Authentication**: JWT (JSON Web Tokens)
+* **Frontend**: React, Vite, React Router, Socket.io Client
+* **Backend**: Node.js, Express
+* **Database**: MongoDB (Mongoose)
+* **Real-Time**: Socket.io
+* **Auth**: JWT (JSON Web Tokens)
 
-## Setup Instructions
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB Atlas account (or local MongoDB installation)
-
-### Installation
-
-1. Clone the repository:
-   \`\`\`bash
-   git clone https://github.com/yourusername/flockshop-wishlist-app.git
-   cd flockshop-wishlist-app
-   \`\`\`
-
-2. Install dependencies for both server and client:
-   \`\`\`bash
-   npm run install-all
-   \`\`\`
-
-3. Create a `.env` file in the root directory with the following variables:
-   \`\`\`
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   PORT=5000
-   \`\`\`
-
-4. Start the development server:
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-5. The application will be running at:
-   - Frontend: http://localhost:3000
-   - Backend: http://localhost:5000
+---
 
 ## Project Structure
 
-\`\`\`
-flockshop-wishlist-app/
-├── client/                 # React frontend
-│   ├── public/             # Static files
-│   ├── src/                # Source files
-│   │   ├── components/     # React components
-│   │   ├── context/        # React context providers
-│   │   ├── pages/          # Page components
-│   │   ├── styles/         # CSS styles
-│   │   ├── App.jsx         # Main App component
-│   │   └── main.jsx        # Entry point
-│   ├── index.html          # HTML template
-│   └── vite.config.js      # Vite configuration
-├── server/                 # Node.js backend
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Express middleware
-│   └── server.js           # Server entry point
-├── .env                    # Environment variables
-├── package.json            # Project dependencies
-└── README.md               # Project documentation
-\`\`\`
+```
+Product-Wishlist-App1/           # Root folder (GitHub: https://github.com/Kapil690789/Product-Wishlist-App1)
+├── frontend/                    # React app
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── context/
+│       ├── styles/
+│       ├── App.jsx
+│       └── main.jsx
+├── backend/                     # Express server
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── server.js
+├── .env.example                 # Sample environment vars
+├── package.json                 # Scripts & dependencies
+└── README.md                    # This file
+```
 
-## Assumptions and Limitations
+---
 
-- The invitation system is mocked - in a production environment, this would send emails to invited users
-- Authentication is implemented using JWT without refresh tokens
-- The application uses a simple in-memory Socket.io implementation without Redis for scaling
-- Image URLs are used instead of file uploads for simplicity
+## Prerequisites
 
-## Future Improvements
+* Node.js v14+
+* MongoDB Atlas account or local MongoDB
 
-- Implement file uploads for product images
-- Add email notifications for invitations and activity
-- Implement refresh tokens for better security
-- Add user profiles and avatars
-- Add sorting and filtering options for products
-- Implement a shopping list feature to track purchased items
-- Add price tracking and comparison features
-- Implement social sharing functionality
-\`\`\`
+---
 
-Now let me provide you with a step-by-step guide to clone and run this project:
+## Setup & Run
 
-## How to Clone and Run the Project
+1. **Clone the repo**
 
-1. **Clone the repository**
-
-   Open your terminal/command prompt and run:
-   \`\`\`bash
-   git clone https://github.com/yourusername/flockshop-wishlist-app.git
-   cd flockshop-wishlist-app
-   \`\`\`
+   ```bash
+   git clone https://github.com/Kapil690789/Product-Wishlist-App1.git
+   cd Product-Wishlist-App1
+   ```
 
 2. **Install dependencies**
 
-   Install both server and client dependencies:
-   \`\`\`bash
-   npm run install-server
-   npm run install-client
-   \`\`\`
-   
-   Or use the combined command:
-   \`\`\`bash
-   npm run install-all
-   \`\`\`
+   ```bash
+   # Backend
+   cd backend
+   npm install
 
-3. **Set up environment variables**
+   # Frontend
+   cd ../frontend
+   npm install
+   ```
 
-   Create a `.env` file in the root directory with your MongoDB connection string:
-   \`\`\`
-   MONGODB_URI=mongodb+srv://kapilsharma:Kapil@cluster0.kapfc.mongodb.net
-   JWT_SECRET=flockshop-secret-key-2025
-   PORT=5000
-   \`\`\`
+3. **Configure environment variables**
 
-4. **Start the development server**
+   * Copy `.env.example` to `.env` in the `backend/` folder
+   * Fill in your values (see [Environment Variables](#environment-variables))
 
-   Run both the backend and frontend in development mode:
-   \`\`\`bash
-   npm run dev
-   \`\`\`
+4. **Start servers**
 
-   This will start:
-   - Backend server at http://localhost:5000
-   - Frontend development server at http://localhost:3000
+   ```bash
+   # In one terminal (backend)
+   cd backend
+   npm run start                # or node server.js
 
-5. **Access the application**
+   # In another terminal (frontend)
+   cd frontend
+   npm run dev                  # Vite dev server
+   ```
 
-   Open your browser and navigate to:
-   \`\`\`
-   http://localhost:3000
-   \`\`\`
+5. **Open in browser**
 
-6. **Create an account and start using the app**
+   * Frontend: [http://localhost:3000](http://localhost:3000)
+   * Backend API: [http://localhost:5001](http://localhost:5001) (or your configured PORT)
 
-   - Register a new account
-   - Create a wishlist
-   - Add products to your wishlist
-   - Invite friends (use another browser or incognito window to test)
-   - React to products and add comments
+---
 
-## Deployment Instructions
+## Environment Variables
 
-To deploy this application to a production environment:
+In `backend/.env`:
 
-1. **Build the frontend**
-   \`\`\`bash
+```
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+PORT=5001
+```
+
+---
+
+## Usage
+
+1. **Sign up** as a new user
+2. **Create** a wishlist
+3. **Add** products (name, image URL, price)
+4. **Invite** collaborators (mocked — share wishlist ID)
+5. **Interact**: React with emojis or comment
+6. **View** real‑time updates across browsers
+
+---
+
+## Assumptions & Limitations
+
+* Invitation emails are mocked (no real email service)
+* JWT without refresh tokens
+* Socket.io uses in‑memory store (no Redis)
+* Product images by URL only (no file uploads)
+
+---
+
+## Future Improvements
+
+* File upload support for images
+* Real email invitations & notifications
+* Refresh token flow for JWT
+* Redis or scaling for Socket.io
+* Product filtering, sorting, price tracking
+* User profiles, avatars, and social sharing
+
+---
+
+## Demo & Screenshots
+
+*(Add screenshots or a Loom link here)*
+
+---
+
+## Deployment
+
+1. **Build frontend**:
+
+   ```bash
+   cd frontend
    npm run build
-   \`\`\`
+   ```
 
-2. **Set up environment variables on your hosting platform**
-   - MONGODB_URI
-   - JWT_SECRET
-   - NODE_ENV=production
+2. **Configure production env vars** on your hosting platform
 
-3. **Deploy the application**
-   - Deploy the backend to a Node.js hosting service (Heroku, Render, DigitalOcean, etc.)
-   - Deploy the frontend build folder to a static hosting service (Netlify, Vercel, etc.) or serve it from your backend
+3. **Deploy backend** to Platform (Heroku, Render, DigitalOcean)
 
-The application is now ready to be used and deployed!
+4. **Serve frontend** from static host (Netlify, Vercel) or via backend
+
+---
+
+*Happy coding!*
