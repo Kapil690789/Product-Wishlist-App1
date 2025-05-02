@@ -5,6 +5,11 @@ A full‑stack MERN application that lets users create, manage, and interact wit
 ---
 
 
+Watch the live demo: Google Drive Demo Video(https://drive.google.com/file/d/1cEZ9RBPU_NubuUjfRKHlx6Up8ah2TUtR/view?usp=sharing)
+
+
+🔗 GitHub Repo : https://github.com/Kapil690789/Product-Wishlist-App1
+
 ---
 
 ## Features
