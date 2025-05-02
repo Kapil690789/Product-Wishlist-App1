@@ -1,0 +1,71 @@
+/* Base container styling with more refined padding and max-width */
+.home-container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Enhanced header with better spacing and alignment */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Typography improvements */
+  .home-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #333;
+  }
+  
+  /* More responsive grid with better sizing controls */
+  .wishlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Card styling (assuming there are cards in the grid) */
+  .wishlist-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .wishlist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Enhanced media queries for better responsiveness */
+  @media (max-width: 768px) {
+    .home-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .wishlists-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-container {
+      padding: 1.5rem 0.75rem;
+    }
+    
+    .wishlists-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
