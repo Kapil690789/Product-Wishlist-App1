@@ -4,19 +4,6 @@ A full‑stack MERN application that lets users create, manage, and interact wit
 
 ---
 
-## Table of Contents
-
-1. [Features](#features)
-2. [Tech Stack](#tech-stack)
-3. [Project Structure](#project-structure)
-4. [Prerequisites](#prerequisites)
-5. [Setup & Run](#setup--run)
-6. [Environment Variables](#environment-variables)
-7. [Usage](#usage)
-8. [Assumptions & Limitations](#assumptions--limitations)
-9. [Future Improvements](#future-improvements)
-10. [Demo & Screenshots](#demo--screenshots)
-11. [Deployment](#deployment)
 
 ---
 
